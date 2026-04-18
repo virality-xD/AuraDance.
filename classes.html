@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Classes | Aura Dance Studio</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-header {
+      padding: 150px 0 80px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(10,10,10,1), rgba(18,18,18,1));
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .class-detailed {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+    .class-detailed:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .class-info { flex: 1; }
+    .class-image {
+      flex: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .class-info h2 { color: var(--color-primary); margin-bottom: 1rem; }
+    .class-info p { color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+    
+    .benefits-list { margin-bottom: 1.5rem; }
+    .benefits-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .benefits-list i { color: var(--color-primary); }
+    
+    @media (max-width: 768px) {
+      .class-detailed, .class-detailed:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-brand">Aura <span>Dance.</span></div></div>
+<div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Aura <span>Dance.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html" class="text-primary">Classes</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger"><i class="ph ph-list"></i></div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container reveal">
+      <h1 class="heading-lg">Master Your <span class="text-primary">Movement.</span></h1>
+      <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">From heart-pumping Bollywood to intensely technical Contemporary routines, find the rhythm that matches your soul.</p>
+    </div>
+  </header>
+
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Class 1 -->
+      <div class="class-detailed reveal">
+        <div class="class-image">
+          <img src="images/bollywood.png" alt="Bollywood Dance Class">
+        </div>
+        <div class="class-info">
+          <h2 class="heading-md">Bollywood Fusion</h2>
+          <p>An explosive blend of classical Indian elements and modern commercial dance. Build extreme stamina while mastering expressions and stage presence. Designed to make you feel like a superstar.</p>
+          <ul class="benefits-list">
+            <li><i class="ph ph-check-circle"></i> High Calorie Burn</li>
+            <li><i class="ph ph-check-circle"></i> Improves Coordination</li>
+            <li><i class="ph ph-check-circle"></i> Extreme Confidence Boost</li>
+          </ul>
+          <a href="schedule.html" class="btn btn-outline">Check Timetable</a>
+        </div>
+      </div>
+
+      <!-- Class 2 -->
+      <div class="class-detailed reveal">
+        <div class="class-image">
+          <img src="images/hiphop.png" alt="Hip-Hop Dance Class">
+        </div>
+        <div class="class-info">
+          <h2 class="heading-md">Hip-Hop & Urban</h2>
+          <p>Dive deep into street styles, grooves, isolations, and musicality. Our Hip-Hop sessions focus on intricate footwork and powerful hitting, teaching you how to listen to the beat differently.</p>
+          <ul class="benefits-list">
+            <li><i class="ph ph-check-circle"></i> Enhances Core Strength</li>
+            <li><i class="ph ph-check-circle"></i> Musicality & Rhythm</li>
+            <li><i class="ph ph-check-circle"></i> Foundational Grooves</li>
+          </ul>
+          <a href="schedule.html" class="btn btn-outline">Check Timetable</a>
+        </div>
+      </div>
+
+      <!-- Class 3 -->
+      <div class="class-detailed reveal">
+        <div class="class-image">
+          <img src="images/hero.png" alt="Contemporary Dance Class">
+        </div>
+        <div class="class-info">
+          <h2 class="heading-md">Contemporary & Lyrical</h2>
+          <p>Connect your mind, body, and emotions. This class emphasizes fluid movements, floor work, and technical leaps. Learn to use gravity and breath to tell a story through your dance.</p>
+          <ul class="benefits-list">
+            <li><i class="ph ph-check-circle"></i> Deep Flexibility</li>
+            <li><i class="ph ph-check-circle"></i> Emotional Release</li>
+            <li><i class="ph ph-check-circle"></i> Balance & Technique</li>
+          </ul>
+          <a href="schedule.html" class="btn btn-outline">Check Timetable</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding" style="background: var(--color-surface); text-align: center;">
+    <div class="container reveal">
+      <h2 class="heading-md">Unsure Where to Start?</h2>
+      <p style="color: var(--color-text-muted); margin-bottom: var(--space-md);">Talk to one of our lead instructors to find the perfect discipline for your goals.</p>
+      <a href="contact.html" class="btn btn-primary">Get Consultation</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="nav-brand" style="display: inline-block; margin-bottom: 1rem;">Aura <span>Dance.</span></a>
+          <p>Premium choreography and fitness designed to transform your lifestyle.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="classes.html">Our Classes</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="ph ph-map-pin"></i> 123 Elite Avenue, Metro City</p>
+          <p><i class="ph ph-phone"></i> +1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Aura Dance Studio. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

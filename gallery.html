@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Aura Dance Studio</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-header {
+      padding: 150px 0 80px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(10,10,10,1), rgba(18,18,18,1));
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .masonry-grid {
+      column-count: 3;
+      column-gap: var(--space-sm);
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: var(--space-sm);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .masonry-item img {
+      width: 100%;
+      display: block;
+      transition: transform var(--transition-slow);
+    }
+    .masonry-item::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10,10,10,0.5);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+    .masonry-item:hover img {
+      transform: scale(1.05);
+    }
+    .masonry-item:hover::after {
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .masonry-grid { column-count: 2; }
+    }
+    @media (max-width: 600px) {
+      .masonry-grid { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-brand">Aura <span>Dance.</span></div></div>
+<div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Aura <span>Dance.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html" class="text-primary">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger"><i class="ph ph-list"></i></div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container reveal">
+      <h1 class="heading-lg">The <span class="text-primary">Vibe.</span></h1>
+      <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">Catch a glimpse of the energy, the passion, and the community inside Aura Dance Studio.</p>
+    </div>
+  </header>
+
+  <section class="section-padding">
+    <div class="container reveal">
+      <div class="masonry-grid">
+        <div class="masonry-item"><img src="images/hero.png" alt="Gallery Image"></div>
+        <div class="masonry-item"><img src="images/bollywood.png" alt="Gallery Image"></div>
+        <div class="masonry-item"><img src="images/hiphop.png" alt="Gallery Image"></div>
+        <div class="masonry-item"><img src="images/bollywood.png" alt="Gallery Image"></div>
+        <div class="masonry-item"><img src="images/hero.png" alt="Gallery Image"></div>
+        <div class="masonry-item"><img src="images/hiphop.png" alt="Gallery Image"></div>
+      </div>
+      
+      <div class="text-center" style="margin-top: var(--space-md);">
+        <p style="color: var(--color-text-muted); margin-bottom: 1rem;">Want to see more? Follow us on Instagram.</p>
+        <a href="#" class="btn btn-outline"><i class="ph ph-instagram-logo" style="margin-right: 8px;"></i> @AuraDanceStudio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="nav-brand" style="display: inline-block; margin-bottom: 1rem;">Aura <span>Dance.</span></a>
+          <p>Premium choreography and fitness designed to transform your lifestyle.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="classes.html">Our Classes</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="ph ph-map-pin"></i> 123 Elite Avenue, Metro City</p>
+          <p><i class="ph ph-phone"></i> +1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Aura Dance Studio. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

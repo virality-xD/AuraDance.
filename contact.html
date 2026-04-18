@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Aura Dance Studio</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-header {
+      padding: 150px 0 80px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(10,10,10,1), rgba(18,18,18,1));
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+    
+    .contact-info-card {
+      background: var(--color-surface);
+      padding: var(--space-md);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+      margin-bottom: var(--space-sm);
+    }
+    .contact-info-card h3 { color: var(--color-primary); margin-bottom: 1rem; }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .info-item i { font-size: 2rem; color: var(--color-primary-dark); }
+    .info-item p { margin: 0; color: var(--color-text-muted); }
+    .info-item strong { color: var(--color-text); display: block; }
+    
+    .contact-form textarea.form-control {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-brand">Aura <span>Dance.</span></div></div>
+<div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Aura <span>Dance.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="text-primary">Contact</a>
+      </div>
+      <div class="hamburger"><i class="ph ph-list"></i></div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container reveal">
+      <h1 class="heading-lg">Let's <span class="text-primary">Talk.</span></h1>
+      <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">Have questions about admission, trial classes, or private choreography? Reach out below.</p>
+    </div>
+  </header>
+
+  <section class="section-padding">
+    <div class="container contact-container">
+      
+      <!-- Contact Info -->
+      <div class="reveal">
+        <div class="contact-info-card">
+          <h3>Visit The Studio</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 2rem;">Drop by during working hours to see our floors, equipment, and vibe in person.</p>
+          
+          <div class="info-item">
+            <i class="ph ph-map-pin"></i>
+            <div>
+              <strong>Location</strong>
+              <p>123 Elite Avenue, Metro City, 452001</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="ph ph-phone"></i>
+            <div>
+              <strong>Call / WhatsApp</strong>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="ph ph-envelope"></i>
+            <div>
+              <strong>Email Us</strong>
+              <p>hello@auradance.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="ph ph-clock"></i>
+            <div>
+              <strong>Operating Hours</strong>
+              <p>Mon - Sun: 10:00 AM - 10:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal" style="transition-delay: 0.2s;">
+        <h3 class="heading-md">Send a Message</h3>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <select class="form-control" required style="cursor: pointer;">
+              <option value="" disabled selected>Area of Interest</option>
+              <option value="trial">Book a Trial Class</option>
+              <option value="admission">Admissions/Pricing</option>
+              <option value="private">Private Choreography</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Your Message or Inquiry..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="nav-brand" style="display: inline-block; margin-bottom: 1rem;">Aura <span>Dance.</span></a>
+          <p>Premium choreography and fitness designed to transform your lifestyle.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="classes.html">Our Classes</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="ph ph-map-pin"></i> 123 Elite Avenue, Metro City</p>
+          <p><i class="ph ph-phone"></i> +1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Aura Dance Studio. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Dance Studio - Premium Dance Academy offering Bollywood, Hip-Hop, and Contemporary classes. Find your rhythm. Own your stage.">
+  <title>Aura Dance Studio | Premium Dance Academy</title>
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Home specific styles */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: url('images/hero.png') center/cover no-repeat;
+      padding-top: 80px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.6) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: var(--space-md);
+      color: var(--color-primary-light);
+    }
+    .hero-buttons {
+      display: flex;
+      gap: var(--space-sm);
+    }
+
+    /* Stats Section */
+    .stats-section {
+      background: var(--color-surface);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-sm);
+      text-align: center;
+    }
+    .stat-item h3 {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+    .stat-item p {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+    }
+
+    /* About Snippet */
+    .about-snippet {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+    .about-text { flex: 1; }
+    .about-text h2 { color: var(--color-primary); margin-bottom: 1rem; }
+    .about-text p { margin-bottom: 1.5rem; color: var(--color-text-muted); font-size: 1.1rem; }
+    .about-image {
+      flex: 1;
+      position: relative;
+    }
+    .about-image img {
+      border-radius: 8px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      border: 1px solid var(--color-border);
+    }
+
+    /* Classes Grid */
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+    }
+    .class-card {
+      background: var(--color-surface);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      transition: all var(--transition-normal);
+      cursor: pointer;
+    }
+    .class-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--color-primary);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+    }
+    .class-card-img {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .class-card-img::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; width: 100%; height: 50%;
+      background: linear-gradient(to top, rgba(18,18,18,1) 0%, transparent 100%);
+    }
+    .class-card-content { padding: 1.5rem; position: relative; }
+    .class-card-content h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .class-card-content p { color: var(--color-text-muted); margin-bottom: 1rem; }
+    .class-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--color-primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Testimonials */
+    .testimonial-slide {
+      background: var(--color-surface);
+      padding: var(--space-md);
+      border-radius: 8px;
+      border-left: 4px solid var(--color-primary);
+      margin-bottom: var(--space-sm);
+    }
+    .testimonial-slide p { font-style: italic; margin-bottom: 1rem; }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .author-info h4 { font-size: 1rem; color: var(--color-primary); }
+    .author-info span { font-size: 0.8rem; color: var(--color-text-muted); }
+
+    /* CTA Strip */
+    .cta-strip {
+      background: linear-gradient(135deg, #1f1f1f, #0a0a0a);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .about-snippet { flex-direction: column; }
+      .hero-buttons { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-brand">Aura <span>Dance.</span></div></div>
+<div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Aura <span>Dance.</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="text-primary">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger"><i class="ph ph-list"></i></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content reveal">
+        <h1 class="heading-lg">Step Into Your <span class="text-primary">Spotlight.</span></h1>
+        <p>Experience the ultimate fusion of passion, fitness, and professional choreography. Elevate your confidence and own the stage.</p>
+        <div class="hero-buttons">
+          <a href="schedule.html" class="btn btn-primary">Book Free Trial</a>
+          <a href="classes.html" class="btn btn-outline">Explore Classes</a>
+        </div>
+        <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+          <div style="display: flex; margin-right: -10px;">
+            <img src="images/hero.png" style="width: 35px; height: 35px; border-radius: 50%; border: 2px solid #0a0a0a; margin-left: -10px; object-fit: cover;">
+            <img src="images/bollywood.png" style="width: 35px; height: 35px; border-radius: 50%; border: 2px solid #0a0a0a; margin-left: -10px; object-fit: cover;">
+            <img src="images/hiphop.png" style="width: 35px; height: 35px; border-radius: 50%; border: 2px solid #0a0a0a; margin-left: -10px; object-fit: cover;">
+          </div>
+          <span style="font-size: 0.9rem; color: var(--color-text-muted);">Joined by <strong>5,000+</strong> dancers in Metro City</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats Strip -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <h3>5k+</h3>
+          <p>Students</p>
+        </div>
+        <div class="stat-item reveal" style="transition-delay: 0.1s;">
+          <h3>20+</h3>
+          <p>Pro Instructors</p>
+        </div>
+        <div class="stat-item reveal" style="transition-delay: 0.2s;">
+          <h3>50+</h3>
+          <p>Weekly Classes</p>
+        </div>
+        <div class="stat-item reveal" style="transition-delay: 0.3s;">
+          <h3>100%</h3>
+          <p>Confidence Boost</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Snippet -->
+  <section class="section-padding">
+    <div class="container about-snippet">
+      <div class="about-text reveal">
+        <h2 class="heading-md">Not Just a Class.<br>A <span class="text-primary">Transformation.</span></h2>
+        <p>At Aura Dance Studio, we believe dance is more than movement—it's a lifestyle. Whether you're a beginner looking for fitness and fun, or an aspiring professional honing your craft, our premium facilities and world-class instructors provide the perfect environment for your journey.</p>
+        <a href="about.html" class="btn btn-outline" style="margin-top: 1rem;">Our Story</a>
+      </div>
+      <div class="about-image reveal">
+        <img src="images/bollywood.png" alt="Dance class transformation">
+      </div>
+    </div>
+  </section>
+
+  <!-- Classes Preview -->
+  <section class="section-padding" style="background-color: var(--color-surface);">
+    <div class="container">
+      <div class="text-center reveal">
+        <h2 class="heading-md">Find Your <span class="text-primary">Rhythm.</span></h2>
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-md);">Curated classes for every style and skill level.</p>
+      </div>
+
+      <div class="classes-grid">
+        <!-- Class 1 -->
+        <div class="class-card reveal">
+          <div class="class-card-img" style="background-image: url('images/bollywood.png');"></div>
+          <div class="class-card-content">
+            <h3>Bollywood Fusion</h3>
+            <p>High energy, dramatic, and intensely fun. Master the art of expression and stage presence.</p>
+            <div class="class-meta">
+              <span>All Levels</span>
+              <span><i class="ph ph-fire"></i> High Intensity</span>
+            </div>
+          </div>
+        </div>
+        <!-- Class 2 -->
+        <div class="class-card reveal" style="transition-delay: 0.2s;">
+          <div class="class-card-img" style="background-image: url('images/hiphop.png');"></div>
+          <div class="class-card-content">
+            <h3>Hip-Hop & Urban</h3>
+            <p>Raw, powerful street styles focusing on musicality, grooves, and intricate choreography.</p>
+            <div class="class-meta">
+              <span>Intermediate</span>
+              <span><i class="ph ph-fire"></i> Med Intensity</span>
+            </div>
+          </div>
+        </div>
+        <!-- Class 3 -->
+        <div class="class-card reveal" style="transition-delay: 0.4s;">
+          <div class="class-card-img" style="background-image: url('images/hero.png');"></div>
+          <div class="class-card-content">
+            <h3>Contemporary</h3>
+            <p>Fluid, emotional, and technical. Connect deeply with music through expressive motion.</p>
+            <div class="class-meta">
+              <span>All Levels</span>
+              <span><i class="ph ph-wind"></i> Med Intensity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center" style="margin-top: var(--space-md);">
+        <a href="classes.html" class="btn btn-primary">View All Classes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="section-padding cta-strip">
+    <div class="container reveal">
+      <h2 class="heading-md">Ready to Own the Stage?</h2>
+      <p style="color: var(--color-text-muted); margin-bottom: var(--space-sm); max-width: 600px; margin-left: auto; margin-right: auto;">Join our new batch starting next week. Seats are strictly limited to ensure premium coaching quality.</p>
+      <a href="schedule.html" class="btn btn-primary">Claim Your Spot Today</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Snippet -->
+  <section class="section-padding">
+    <div class="container reveal">
+      <h2 class="heading-md text-center">Student <span class="text-primary">Stories.</span></h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-sm); margin-top: var(--space-md);">
+        <div class="testimonial-slide">
+          <div style="color: var(--color-primary); margin-bottom: 0.8rem; font-size: 1.2rem;">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p>"The energy here is unmatched. I came for a workout and found a family. The Bollywood batches have completely transformed my confidence!"</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Sarah J.</h4>
+              <span>Corporate Professional</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div style="color: var(--color-primary); margin-bottom: 0.8rem; font-size: 1.2rem;">
+            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+          </div>
+          <p>"Aura isn't a regular local class; it feels like an international studio. The hip-hop instructors push you past your limits."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Rahul K.</h4>
+              <span>College Student</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="nav-brand" style="display: inline-block; margin-bottom: 1rem;">Aura <span>Dance.</span></a>
+          <p>Premium choreography and fitness designed to transform your lifestyle.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 1.5rem;">
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="classes.html">Our Classes</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="ph ph-map-pin"></i> 123 Elite Avenue, Metro City</p>
+          <p><i class="ph ph-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="ph ph-envelope"></i> hello@auradance.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Aura Dance Studio. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+

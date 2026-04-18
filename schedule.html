@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule | Aura Dance Studio</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .page-header {
+      padding: 150px 0 80px;
+      text-align: center;
+      background: linear-gradient(to bottom, rgba(10,10,10,1), rgba(18,18,18,1));
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .timetable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--space-md);
+      background: var(--color-surface);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .timetable th, .timetable td {
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .timetable th {
+      background: #1a1a1a;
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .timetable td {
+      transition: all var(--transition-fast);
+    }
+    .timetable td:hover {
+      background: var(--color-surface-hover);
+    }
+    .class-slot h4 { color: var(--color-text); margin-bottom: 0.2rem; font-size: 1.1rem; }
+    .class-slot p { color: var(--color-primary-dark); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+    
+    .booking-card {
+      background: linear-gradient(135deg, #1f1f1f, #0a0a0a);
+      border: 1px solid var(--color-primary);
+      border-radius: 8px;
+      padding: var(--space-md);
+      text-align: center;
+      margin-top: var(--space-lg);
+    }
+
+    @media (max-width: 900px) {
+      .timetable { display: block; overflow-x: auto; white-space: nowrap; }
+    }
+  </style>
+</head>
+<body>
+<div id="preloader"><div class="preloader-brand">Aura <span>Dance.</span></div></div>
+<div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container">
+      <a href="index.html" class="nav-brand">Aura <span>Dance.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="schedule.html" class="text-primary">Schedule</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="hamburger"><i class="ph ph-list"></i></div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container reveal">
+      <h1 class="heading-lg">Book Your <span class="text-primary">Session.</span></h1>
+      <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto; font-size: 1.2rem;">Our timetable is designed for working professionals and students alike. Pick a slot, show up, and let's work.</p>
+    </div>
+  </header>
+
+  <section class="section-padding">
+    <div class="container reveal">
+      <div style="overflow-x: auto;">
+        <table class="timetable">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Wednesday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>17:00 - 18:30</strong></td>
+              <td>
+                <div class="class-slot"><h4>Hip-Hop</h4><p>Beginner</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Bollywood</h4><p>All Levels</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Contemporary</h4><p>Int.</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Workshops</h4><p>Guest Choreographer</p></div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>18:30 - 20:00</strong></td>
+              <td>
+                <div class="class-slot"><h4>Bollywood</h4><p>All Levels</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Hip-Hop</h4><p>Intermediate</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Bollywood</h4><p>Advanced</p></div>
+              </td>
+              <td>
+                <div class="class-slot">-</div>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>20:00 - 21:30</strong></td>
+              <td>
+                <div class="class-slot"><h4>Contemporary</h4><p>All Levels</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Urban Choreo</h4><p>Advanced</p></div>
+              </td>
+              <td>
+                <div class="class-slot"><h4>Hip-Hop</h4><p>Freestyle Session</p></div>
+              </td>
+              <td>
+                <div class="class-slot">-</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="booking-card reveal">
+        <h2 class="heading-md">Next Batch Starting Soon</h2>
+        <p style="margin-bottom: 1.5rem; color: var(--color-text-muted);">Secure your slot now via WhatsApp directly with our front desk manager.</p>
+        <a href="https://wa.me/15551234567" class="btn btn-primary" target="_blank"><i class="ph ph-whatsapp-logo" style="margin-right: 8px; font-size: 1.2rem;"></i> Book Via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#" class="nav-brand" style="display: inline-block; margin-bottom: 1rem;">Aura <span>Dance.</span></a>
+          <p>Premium choreography and fitness designed to transform your lifestyle.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="classes.html">Our Classes</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="ph ph-map-pin"></i> 123 Elite Avenue, Metro City</p>
+          <p><i class="ph ph-phone"></i> +1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Aura Dance Studio. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
